@@ -1,0 +1,921 @@
+{
+  "report_metadata": {
+    "tool": "Threat Intelligence Aggregator",
+    "version": "1.0.0",
+    "generated": "2026-04-23 05:47:46 UTC",
+    "report_id": "TI-20260423054746"
+  },
+  "summary": {
+    "total_unique": 35,
+    "total_repeated": 13,
+    "total_high_risk": 3,
+    "by_type": {
+      "ip": 15,
+      "hash": 5,
+      "domain": 6,
+      "email": 4,
+      "url": 5
+    },
+    "by_severity": {
+      "Critical": 0,
+      "High": 3,
+      "Medium": 13,
+      "Low": 19
+    },
+    "feeds_processed": 4
+  },
+  "high_risk_indicators": [
+    {
+      "value": "185.220.101.45",
+      "type": "ip",
+      "severity": "High",
+      "source": "feed1_ips.csv, feed1_ips.txt, feed2_mixed.txt, feed3_structured.json",
+      "description": "Tor exit node used in brute-force | Tor exit node + C2 multi-purpose",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 4,
+      "category": "tor",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed1_ips.txt",
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 70,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "44d88612fea8a8f36de82e1278abb02f",
+      "type": "hash",
+      "severity": "High",
+      "source": "feed1_ips.csv, feed2_mixed.txt, feed3_structured.json",
+      "description": "EICAR test / Emotet variant | Emotet dropper MD5",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 3,
+      "category": "malware-artifact",
+      "hash_type": "MD5",
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 60,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "ransomware-cdn.darkweb.onion.ws",
+      "type": "domain",
+      "severity": "High",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "Ransomware distribution CDN",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "ransomware",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 50,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    }
+  ],
+  "correlated_indicators": [
+    {
+      "value": "185.220.101.45",
+      "type": "ip",
+      "severity": "High",
+      "source": "feed1_ips.csv, feed1_ips.txt, feed2_mixed.txt, feed3_structured.json",
+      "description": "Tor exit node used in brute-force | Tor exit node + C2 multi-purpose",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 4,
+      "category": "tor",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed1_ips.txt",
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 70,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "44d88612fea8a8f36de82e1278abb02f",
+      "type": "hash",
+      "severity": "High",
+      "source": "feed1_ips.csv, feed2_mixed.txt, feed3_structured.json",
+      "description": "EICAR test / Emotet variant | Emotet dropper MD5",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 3,
+      "category": "malware-artifact",
+      "hash_type": "MD5",
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 60,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "ransomware-cdn.darkweb.onion.ws",
+      "type": "domain",
+      "severity": "High",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "Ransomware distribution CDN",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "ransomware",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 50,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "45.142.212.100",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed2_mixed.txt",
+      "description": "C2 server linked to Emotet",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "c2",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "malware.evil-domain.ru",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed2_mixed.txt",
+      "description": "Malware C2 domain",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malware",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "update.fake-microsoft.com",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed2_mixed.txt",
+      "description": "Phishing domain",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "phishing",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "attacker@evil-domain.ru",
+      "type": "email",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed3_structured.json",
+      "description": "Phishing sender | APT phishing email",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "threat-actor-email",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "77.83.247.81",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "Active botnet C2 node",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "5.188.86.172",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "SSH brute-force origin",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "cdn.malvertising-network.com",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "Malvertising network host",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-domain",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "91.108.4.0",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed3_structured.json",
+      "description": "Known scanner | Port scanner",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "scanner",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed3_structured.json"
+      ],
+      "risk_score": 25,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "bad-actor.xyz",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed3_structured.json",
+      "description": "Spam domain | Spam campaign domain",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "spam",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed3_structured.json"
+      ],
+      "risk_score": 25,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "203.0.113.99",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed1_ips.txt, feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 25,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    }
+  ],
+  "full_ioc_database": [
+    {
+      "value": "185.220.101.45",
+      "type": "ip",
+      "severity": "High",
+      "source": "feed1_ips.csv, feed1_ips.txt, feed2_mixed.txt, feed3_structured.json",
+      "description": "Tor exit node used in brute-force | Tor exit node + C2 multi-purpose",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 4,
+      "category": "tor",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed1_ips.txt",
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 70,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "44d88612fea8a8f36de82e1278abb02f",
+      "type": "hash",
+      "severity": "High",
+      "source": "feed1_ips.csv, feed2_mixed.txt, feed3_structured.json",
+      "description": "EICAR test / Emotet variant | Emotet dropper MD5",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 3,
+      "category": "malware-artifact",
+      "hash_type": "MD5",
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 60,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "ransomware-cdn.darkweb.onion.ws",
+      "type": "domain",
+      "severity": "High",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "Ransomware distribution CDN",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "ransomware",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 50,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "45.142.212.100",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed2_mixed.txt",
+      "description": "C2 server linked to Emotet",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "c2",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "malware.evil-domain.ru",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed2_mixed.txt",
+      "description": "Malware C2 domain",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malware",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "update.fake-microsoft.com",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed2_mixed.txt",
+      "description": "Phishing domain",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "phishing",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "attacker@evil-domain.ru",
+      "type": "email",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed3_structured.json",
+      "description": "Phishing sender | APT phishing email",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "threat-actor-email",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "77.83.247.81",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "Active botnet C2 node",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "5.188.86.172",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "SSH brute-force origin",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "cdn.malvertising-network.com",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed2_mixed.txt, feed3_structured.json",
+      "description": "Malvertising network host",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-domain",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt",
+        "feed3_structured.json"
+      ],
+      "risk_score": 40,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "http://malicious-payload.net/download/trojan.exe",
+      "type": "url",
+      "severity": "Medium",
+      "source": "feed1_ips.csv",
+      "description": "Trojan dropper URL",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-url",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv"
+      ],
+      "risk_score": 30,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "https://cdn.malvertising-network.com/ads/payload.js",
+      "type": "url",
+      "severity": "Medium",
+      "source": "feed3_structured.json",
+      "description": "Malvertising JavaScript payload",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-url",
+      "hash_type": null,
+      "sources": [
+        "feed3_structured.json"
+      ],
+      "risk_score": 30,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "a87ff679a2f3e71d9181a67b7542122c",
+      "type": "hash",
+      "severity": "Medium",
+      "source": "feed3_structured.json",
+      "description": "Ransomware encryptor MD5",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malware-artifact",
+      "hash_type": "MD5",
+      "sources": [
+        "feed3_structured.json"
+      ],
+      "risk_score": 30,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "91.108.4.0",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed3_structured.json",
+      "description": "Known scanner | Port scanner",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "scanner",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed3_structured.json"
+      ],
+      "risk_score": 25,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "bad-actor.xyz",
+      "type": "domain",
+      "severity": "Medium",
+      "source": "feed1_ips.csv, feed3_structured.json",
+      "description": "Spam domain | Spam campaign domain",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "spam",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv",
+        "feed3_structured.json"
+      ],
+      "risk_score": 25,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "203.0.113.99",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "feed1_ips.txt, feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 2,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt",
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 25,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "104.21.14.200",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed1_ips.csv",
+      "description": "Phishing infrastructure",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.csv"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "45.33.32.156",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed1_ips.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "198.51.100.23",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed1_ips.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "91.108.4.10",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed1_ips.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "185.220.101.46",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed1_ips.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "192.0.2.1",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed1_ips.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "194.165.16.76",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed1_ips.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed1_ips.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "198.51.100.22",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "192.0.2.188",
+      "type": "ip",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-ip",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "phish.fake-paypal.com",
+      "type": "domain",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "phishing",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "http://198.51.100.22/payload/stage2.bin",
+      "type": "url",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-url",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "http://phish.fake-paypal.com/login/steal.php",
+      "type": "url",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-url",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "https://ransomware-cdn.darkweb.onion.ws/locker.exe",
+      "type": "url",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malicious-url",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "d41d8cd98f00b204e9800998ecf8427e",
+      "type": "hash",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malware-artifact",
+      "hash_type": "MD5",
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "098f6bcd4621d373cade4e832627b4f6",
+      "type": "hash",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malware-artifact",
+      "hash_type": "MD5",
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "5d41402abc4b2a76b9719d911017c592",
+      "type": "hash",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "malware-artifact",
+      "hash_type": "MD5",
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "phish@fake-paypal.com",
+      "type": "email",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "threat-actor-email",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "noreply@malware.evil-domain.ru",
+      "type": "email",
+      "severity": "Low",
+      "source": "feed2_mixed.txt",
+      "description": "",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "threat-actor-email",
+      "hash_type": null,
+      "sources": [
+        "feed2_mixed.txt"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    },
+    {
+      "value": "spam-bot@cdn.malvertising-network.com",
+      "type": "email",
+      "severity": "Low",
+      "source": "feed3_structured.json",
+      "description": "Spam bot email",
+      "first_seen": "2026-04-23 05:47:46 UTC",
+      "feed_count": 1,
+      "category": "threat-actor-email",
+      "hash_type": null,
+      "sources": [
+        "feed3_structured.json"
+      ],
+      "risk_score": 15,
+      "correlated_at": "2026-04-23 05:47:46 UTC"
+    }
+  ],
+  "blocklist_summary": {
+    "ip": {
+      "file": "ip_blocklist.txt",
+      "count": 15
+    },
+    "domain": {
+      "file": "domain_blocklist.txt",
+      "count": 6
+    },
+    "url": {
+      "file": "url_blocklist.txt",
+      "count": 5
+    },
+    "hash": {
+      "file": "hash_blocklist.txt",
+      "count": 5
+    },
+    "email": {
+      "file": "email_blocklist.txt",
+      "count": 4
+    },
+    "csv": {
+      "file": "master_blocklist.csv",
+      "count": 35
+    },
+    "json": {
+      "file": "master_blocklist.json",
+      "count": 35
+    },
+    "high_risk": {
+      "file": "high_risk_only.csv",
+      "count": 3
+    }
+  }
+}

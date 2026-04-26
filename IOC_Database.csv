@@ -1,0 +1,36 @@
+risk_score,severity,value,type,category,hash_type,feed_count,source,description,correlated_at
+70,High,185.220.101.45,ip,tor,,4,"feed1_ips.csv, feed1_ips.txt, feed2_mixed.txt, feed3_structured.json",Tor exit node used in brute-force | Tor exit node + C2 multi-purpose,2026-04-23 05:47:46 UTC
+60,High,44d88612fea8a8f36de82e1278abb02f,hash,malware-artifact,MD5,3,"feed1_ips.csv, feed2_mixed.txt, feed3_structured.json",EICAR test / Emotet variant | Emotet dropper MD5,2026-04-23 05:47:46 UTC
+50,High,ransomware-cdn.darkweb.onion.ws,domain,ransomware,,2,"feed2_mixed.txt, feed3_structured.json",Ransomware distribution CDN,2026-04-23 05:47:46 UTC
+40,Medium,45.142.212.100,ip,c2,,2,"feed1_ips.csv, feed2_mixed.txt",C2 server linked to Emotet,2026-04-23 05:47:46 UTC
+40,Medium,malware.evil-domain.ru,domain,malware,,2,"feed1_ips.csv, feed2_mixed.txt",Malware C2 domain,2026-04-23 05:47:46 UTC
+40,Medium,update.fake-microsoft.com,domain,phishing,,2,"feed1_ips.csv, feed2_mixed.txt",Phishing domain,2026-04-23 05:47:46 UTC
+40,Medium,attacker@evil-domain.ru,email,threat-actor-email,,2,"feed1_ips.csv, feed3_structured.json",Phishing sender | APT phishing email,2026-04-23 05:47:46 UTC
+40,Medium,77.83.247.81,ip,malicious-ip,,2,"feed2_mixed.txt, feed3_structured.json",Active botnet C2 node,2026-04-23 05:47:46 UTC
+40,Medium,5.188.86.172,ip,malicious-ip,,2,"feed2_mixed.txt, feed3_structured.json",SSH brute-force origin,2026-04-23 05:47:46 UTC
+40,Medium,cdn.malvertising-network.com,domain,malicious-domain,,2,"feed2_mixed.txt, feed3_structured.json",Malvertising network host,2026-04-23 05:47:46 UTC
+30,Medium,http://malicious-payload.net/download/trojan.exe,url,malicious-url,,1,feed1_ips.csv,Trojan dropper URL,2026-04-23 05:47:46 UTC
+30,Medium,https://cdn.malvertising-network.com/ads/payload.js,url,malicious-url,,1,feed3_structured.json,Malvertising JavaScript payload,2026-04-23 05:47:46 UTC
+30,Medium,a87ff679a2f3e71d9181a67b7542122c,hash,malware-artifact,MD5,1,feed3_structured.json,Ransomware encryptor MD5,2026-04-23 05:47:46 UTC
+25,Medium,91.108.4.0,ip,scanner,,2,"feed1_ips.csv, feed3_structured.json",Known scanner | Port scanner,2026-04-23 05:47:46 UTC
+25,Medium,bad-actor.xyz,domain,spam,,2,"feed1_ips.csv, feed3_structured.json",Spam domain | Spam campaign domain,2026-04-23 05:47:46 UTC
+25,Medium,203.0.113.99,ip,malicious-ip,,2,"feed1_ips.txt, feed2_mixed.txt",,2026-04-23 05:47:46 UTC
+15,Low,104.21.14.200,ip,malicious-ip,,1,feed1_ips.csv,Phishing infrastructure,2026-04-23 05:47:46 UTC
+15,Low,45.33.32.156,ip,malicious-ip,,1,feed1_ips.txt,,2026-04-23 05:47:46 UTC
+15,Low,198.51.100.23,ip,malicious-ip,,1,feed1_ips.txt,,2026-04-23 05:47:46 UTC
+15,Low,91.108.4.10,ip,malicious-ip,,1,feed1_ips.txt,,2026-04-23 05:47:46 UTC
+15,Low,185.220.101.46,ip,malicious-ip,,1,feed1_ips.txt,,2026-04-23 05:47:46 UTC
+15,Low,192.0.2.1,ip,malicious-ip,,1,feed1_ips.txt,,2026-04-23 05:47:46 UTC
+15,Low,194.165.16.76,ip,malicious-ip,,1,feed1_ips.txt,,2026-04-23 05:47:46 UTC
+15,Low,198.51.100.22,ip,malicious-ip,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,192.0.2.188,ip,malicious-ip,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,phish.fake-paypal.com,domain,phishing,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,http://198.51.100.22/payload/stage2.bin,url,malicious-url,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,http://phish.fake-paypal.com/login/steal.php,url,malicious-url,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,https://ransomware-cdn.darkweb.onion.ws/locker.exe,url,malicious-url,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,d41d8cd98f00b204e9800998ecf8427e,hash,malware-artifact,MD5,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,098f6bcd4621d373cade4e832627b4f6,hash,malware-artifact,MD5,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,5d41402abc4b2a76b9719d911017c592,hash,malware-artifact,MD5,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,phish@fake-paypal.com,email,threat-actor-email,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,noreply@malware.evil-domain.ru,email,threat-actor-email,,1,feed2_mixed.txt,,2026-04-23 05:47:46 UTC
+15,Low,spam-bot@cdn.malvertising-network.com,email,threat-actor-email,,1,feed3_structured.json,Spam bot email,2026-04-23 05:47:46 UTC
