@@ -32,7 +32,7 @@ Security teams rely on threat intelligence feeds from multiple sources to detect
 ![Architecture](images/Architecture.png)
 
 ### Threat Intelligence Results
-![Repository](images/Repositroy.png)
+![Repository](images/Repository.png)
 
 **This tool automates that entire workflow.**
 
