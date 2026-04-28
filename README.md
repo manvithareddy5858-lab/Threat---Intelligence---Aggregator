@@ -57,20 +57,19 @@ Feed Loader
 IOC Parser
      │
      ▼
-Normalization Engine
+Normalization 
      │
      ▼
-Correlation Engine
+IOC Database
      │
      ▼
-Blocklist Generator
+Correlation
      │
      ▼
 Report Generator
      │
      ▼
 Outputs (Blocklists + TI Reports)
-```
 
 ---
 
