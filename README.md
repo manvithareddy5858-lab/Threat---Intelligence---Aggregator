@@ -23,6 +23,17 @@ Security teams rely on threat intelligence feeds from multiple sources to detect
 - Require manual correlation
 - Are difficult to convert into usable blocklists
 
+## Project Screenshots
+
+### Dashboard
+![Dashboard](images/dashboard.png)
+
+### Architecture
+![Architecture](images/architecture.png)
+
+### Threat Intelligence Results
+![Results](images/results.png)
+
 **This tool automates that entire workflow.**
 
 **Give it a folder of threat feeds → it produces cleaned blocklists and a full intelligence report.**
