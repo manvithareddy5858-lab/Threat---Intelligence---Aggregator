@@ -54,11 +54,30 @@ Security teams rely on threat intelligence feeds from multiple sources to detect
 
 ---
 
+## How to Run the Project
+
+1. Clone the repository
+
+git clone https://github.com/manvithareddy5858-lab/Threat---Intelligence---Aggregator.git
+
+2. Navigate to the project directory
+
+cd Threat---Intelligence---Aggregator
+
+3. Open the project
+
+Open the **index.html** file in a web browser to view the Threat Intelligence Aggregator dashboard.
+
+Alternatively you can view the live deployed version:
+
+https://manvithareddy5858-lab.github.io/Threat---Intelligence---Aggregator/
+
+---
+
 ## System Architecture
 
 The tool processes threat intelligence through a 6-stage pipeline:
 
-```
 Threat Feeds
      │
      ▼
@@ -256,6 +275,26 @@ All modules are from the **Python Standard Library** — no `pip install` requir
 | ipaddress | IP address validation and RFC 1918 filtering |
 | datetime | Timestamping indicators |
 | argparse | Command-line interface |
+
+---
+
+## Example Threat Intelligence Output
+
+The system aggregates Indicators of Compromise (IOCs) such as:
+
+IP Address:
+185.220.101.1
+
+Domain:
+malicious-example.com
+
+URL:
+http://phishing-site-login.com
+
+File Hash (MD5):
+5d41402abc4b2a76b9719d911017c592
+
+These indicators represent potentially malicious activity collected from multiple threat intelligence sources.
 
 ---
 
