@@ -26,13 +26,13 @@ Security teams rely on threat intelligence feeds from multiple sources to detect
 ## Project Screenshots
 
 ### Dashboard
-![Dashboard](Dashboard.png)
+![Dashboard](images/Dashboard.png)
 
 ### Architecture
-![Architecture](Architecture.png)
+![Architecture](images/Architecture.png)
 
 ### Threat Intelligence Results
-![Repository](Repositroy.png)
+![Repository](images/Repositroy.png)
 
 **This tool automates that entire workflow.**
 
