@@ -1,137 +1,113 @@
-Threat Intelligence Aggregator
+# Threat Intelligence Aggregator
 
 A Python-based cybersecurity tool that collects, parses, correlates, and reports on threat indicators (IOCs) from multiple sources.
 
-Built as part of the Unified Mentor Cybersecurity Internship – April 2026.
+Built as part of the **Unified Mentor Cybersecurity Internship** – April 2026.
 
-This project demonstrates how Blue Team and SOC analysts process threat intelligence feeds, identify high-risk indicators, and generate deployment-ready blocklists for defensive security tools.
+---
 
-Project Overview
+## Project Overview
 
-In cybersecurity, a Threat Indicator (IOC – Indicator of Compromise) is evidence of malicious activity. Examples include:
+In cybersecurity, a **Threat Indicator (IOC – Indicator of Compromise)** is evidence of malicious activity. Examples include:
 
-Malicious IP addresses
-Suspicious domain names
-Dangerous URLs
-Malware file hashes
-Attacker email addresses
+- Malicious IP addresses
+- Suspicious domain names
+- Dangerous URLs
+- Malware file hashes
+- Attacker email addresses
 
-Security teams rely on threat intelligence feeds from multiple sources to detect and block threats.
+Security teams rely on threat intelligence feeds from multiple sources to detect and block threats. However, these feeds often:
 
-However, these feeds often:
+- Come in different formats
+- Contain duplicate indicators
+- Require manual correlation
+- Are difficult to convert into usable blocklists
 
-Come in different formats
-Contain duplicate indicators
-Require manual correlation
-Are difficult to convert into usable blocklists
+**This tool automates that entire workflow.**
 
-This tool automates that entire workflow.
+**Give it a folder of threat feeds → it produces cleaned blocklists and a full intelligence report.**
 
-Give it a folder of threat feeds → it produces cleaned blocklists and a full intelligence report.
+---
 
-Key Features
-Multi-format threat feed ingestion (CSV, TXT, JSON)
-Regex-based IOC extraction
-Indicator validation and normalization
-Cross-feed IOC correlation
-Risk scoring engine (0–100)
-Automated blocklist generation
-Human-readable and machine-readable reports
-Modular Python architecture
-Uses only Python standard library (no external dependencies)
-System Architecture
+## Key Features
 
-The tool processes threat intelligence through a 6-stage pipeline.
+- Multi-format threat feed ingestion (CSV, TXT, JSON)
+- Regex-based IOC extraction
+- Indicator validation and normalization
+- Cross-feed IOC correlation
+- Risk scoring engine (0–100)
+- Automated blocklist generation
+- Human-readable and machine-readable reports
+- Modular Python architecture
+- Uses only Python standard library (no external dependencies)
 
+---
+
+## System Architecture
+
+The tool processes threat intelligence through a 6-stage pipeline:
+
+```
 Threat Feeds
-      │
-      ▼
+     │
+     ▼
 Feed Loader
-      │
-      ▼
+     │
+     ▼
 IOC Parser
-      │
-      ▼
+     │
+     ▼
 Normalization Engine
-      │
-      ▼
+     │
+     ▼
 Correlation Engine
-      │
-      ▼
+     │
+     ▼
 Blocklist Generator
-      │
-      ▼
+     │
+     ▼
 Report Generator
-      │
-      ▼
+     │
+     ▼
 Outputs (Blocklists + TI Reports)
-How It Works
+```
 
-The tool runs in six stages:
+---
 
-1. Load Feeds
+## How It Works
 
-Reads all threat feed files from a directory.
+1. **Load Feeds** — reads all threat feed files from a directory (CSV, TXT, JSON supported)
+2. **Parse IOCs** — extracts IP addresses, domains, URLs, file hashes, and emails using regex
+3. **Normalize** — validates and cleans everything; removes duplicates, filters private IP ranges, standardizes metadata
+4. **Correlate** — checks which indicators appear in multiple feeds and scores them by risk (0–100)
+5. **Generate Blocklists** — writes 8 ready-to-deploy blocklist files for different security tools
+6. **Report** — produces a full intelligence report in TXT, JSON, and CSV formats
 
-Supported formats:
+---
 
-CSV
-TXT
-JSON
-2. Parse IOCs
+## How to Run
 
-Extracts indicators using regular expressions:
-
-IP addresses
-Domains
-URLs
-File hashes
-Email addresses
-3. Normalize
-
-Validates and cleans indicators:
-
-Removes invalid entries
-Removes duplicates
-Filters private IP ranges
-Standardizes metadata
-4. Correlate
-
-Finds indicators appearing in multiple feeds.
-
-Indicators seen across multiple sources receive higher confidence scores.
-
-5. Generate Blocklists
-
-Creates ready-to-deploy blocklists for security tools such as:
-
-Firewalls
-DNS filtering systems
-Web proxies
-EDR tools
-6. Reporting
-
-Produces detailed intelligence reports containing:
-
-Indicator statistics
-Risk scoring results
-Correlated high-risk indicators
-Complete IOC database
-How to Run
-
-Basic execution:
-
+```bash
+# Basic run — processes all files in the feeds/ folder
 python main.py
 
-Processes all feeds located in the feeds/ directory.
-
-Use a custom feed directory
+# Use a custom feed directory
 python main.py --feeds /path/to/your/feeds
-Only include higher-risk indicators
+
+# Only include higher-risk indicators
 python main.py --min-score 30
-Specify all parameters
+
+# Specify all parameters
 python main.py --feeds ./feeds --output ./results --min-score 25
-Example Execution Output
+```
+
+No installation needed. Uses Python 3 standard library only.
+
+---
+
+## Example Execution Output
+
+```
 python main.py --feeds ./feeds
 
 [+] Loading feeds...
@@ -142,24 +118,30 @@ python main.py --feeds ./feeds
 [+] Writing TI report...
 
 Pipeline complete.
-Project Structure
+```
+
+---
+
+## Project Structure
+
+```
 ti_aggregator/
 │
-├── main.py                  # Entry point for the application
-├── requirements.txt         # No external packages required
+├── main.py                  ← Run this to start the tool
+├── requirements.txt         ← No external packages needed
 ├── README.md
 │
-├── feeds/                   # Threat feed input files
+├── feeds/                   ← Put your threat feed files here
 │   ├── feed1_ips.csv
 │   ├── feed2_mixed.txt
 │   └── feed3_structured.json
 │
-├── modules/                 # Core processing modules
-│   ├── parser.py            # Feed parser
-│   ├── normalizer.py        # Data normalization & validation
-│   ├── correlator.py        # IOC correlation engine
-│   ├── blocklist_gen.py     # Blocklist generation
-│   └── reporter.py          # Report generation
+├── modules/                 ← Core processing modules
+│   ├── parser.py            ← Feed parser
+│   ├── normalizer.py        ← Data normalization & validation
+│   ├── correlator.py        ← IOC correlation engine
+│   ├── blocklist_gen.py     ← Blocklist generation
+│   └── reporter.py          ← Report generation
 │
 └── output/
     ├── blocklists/
@@ -171,114 +153,129 @@ ti_aggregator/
     │   ├── master_blocklist.csv
     │   ├── master_blocklist.json
     │   └── high_risk_only.csv
-    │
     └── reports/
         ├── ti_report.txt
         ├── ti_report.json
         └── ioc_database.csv
-Feed Formats Supported
-Format	Extension	Notes
-CSV	.csv	Must include indicator, type, severity, source
-Plain Text	.txt	One indicator per line
-JSON	.json	Contains an indicators array
-IOC Types Supported
-Type	Example
-IP Address	185.220.101.45
-Domain	malware.evil-domain.ru
-URL	http://malicious-site.net/payload.exe
-File Hash	44d88612fea8a8f36de82e1278abb02f
-Email Address	attacker@evil-domain.ru
-Risk Scoring
+```
 
-Each indicator receives a score between 0 and 100.
+---
 
-Scoring logic:
+## Feed Formats Supported
 
-Risk Score =
-Base Severity Score
-+ (10 × Additional Feed Count)  [max 30]
-+ Multi-Feed Bonus (10 if indicator appears in 3+ feeds)
+| Format | Extension | Notes |
+|--------|-----------|-------|
+| CSV | .csv | Must include columns: indicator, type, severity, source |
+| Plain Text | .txt | One indicator per line; lines starting with `#` are ignored |
+| JSON | .json | Must contain an `indicators` array of objects |
 
-Severity thresholds:
+---
 
-Critical ≥ 75
-High ≥ 50
-Medium ≥ 25
-Low < 25
-Sample Results (Test Run)
+## IOC Types Supported
 
-Feeds processed: 4
+| Type | Example |
+|------|---------|
+| IP Address | 185.220.101.45 |
+| Domain | malware.evil-domain.ru |
+| URL | http://malicious-site.net/payload.exe |
+| File Hash (MD5/SHA1/SHA256) | 44d88612fea8a8f36de82e1278abb02f |
+| Email Address | attacker@evil-domain.ru |
 
-Raw indicators collected: 57
+---
 
-Valid unique indicators after normalization: 35
+## Risk Scoring
 
-Indicators appearing in multiple feeds: 13
+Every indicator receives a score between **0 and 100**:
 
-High-risk indicators (score ≥ 50): 3
+- Starts with a base score based on severity (Low = 5, Medium = 15, High = 30, Critical = 40)
+- Gets **+10 points** for every additional feed it appears in (up to +30)
+- Gets **+10 bonus points** if it appears in 3 or more feeds
+- Final score is capped at 100
 
-Blocklist files generated: 8
+**Score thresholds:** Critical ≥ 75 | High ≥ 50 | Medium ≥ 25 | Low < 25
 
-Pipeline runtime: < 1 second
+---
 
-Output Files
-Blocklists
-File	Used With
-ip_blocklist.txt	iptables, pfSense, Palo Alto
-domain_blocklist.txt	DNS filtering / Pi-hole
-url_blocklist.txt	Web proxies
-hash_blocklist.txt	EDR / Antivirus
-email_blocklist.txt	Email security gateways
-master_blocklist.csv	SIEM ingestion
-master_blocklist.json	API integration
-high_risk_only.csv	Immediate threat response
-Reports
-File	Description
-ti_report.txt	Human-readable threat intelligence report
-ti_report.json	Structured report for automation
-ioc_database.csv	Full IOC dataset
-Libraries Used
+## Sample Results (Test Run)
 
-All modules are from the Python Standard Library.
+- Feeds processed: **4**
+- Raw indicators collected: **57**
+- Valid unique indicators after normalization: **35**
+- Indicators appearing in multiple feeds: **13**
+- High-risk indicators (score ≥ 50): **3**
+- Blocklist files generated: **8**
+- Pipeline runtime: **< 1 second**
 
-Library	Purpose
-re	IOC pattern extraction
-csv	CSV parsing
-json	JSON feed parsing
-os	File system operations
-ipaddress	IP validation
-datetime	Timestamping indicators
-argparse	Command line interface
+---
 
-No external dependencies required.
+## Output Files
 
-Example Screenshots
+### Blocklists
 
-Example execution of the tool.
+| File | Used With |
+|------|-----------|
+| ip_blocklist.txt | iptables, pfSense, Palo Alto |
+| domain_blocklist.txt | DNS filtering / Pi-hole |
+| url_blocklist.txt | Web proxies (Squid, Nginx) |
+| hash_blocklist.txt | EDR / Antivirus (CrowdStrike, Defender, YARA) |
+| email_blocklist.txt | Email security gateways (SpamAssassin, Postfix, M365) |
+| master_blocklist.csv | SIEM ingestion — all IOC types |
+| master_blocklist.json | API / SOAR integration |
+| high_risk_only.csv | Immediate threat response (score ≥ 50) |
 
-(Screenshots can be added here showing terminal execution and generated reports.)
+### Reports
 
-Future Improvements
+| File | Description |
+|------|-------------|
+| ti_report.txt | Human-readable threat intelligence report |
+| ti_report.json | Structured report for automation |
+| ioc_database.csv | Full IOC dataset — complete spreadsheet |
+
+---
+
+## Libraries Used
+
+All modules are from the **Python Standard Library** — no `pip install` required:
+
+| Library | Purpose |
+|---------|---------|
+| re | IOC pattern extraction via regex |
+| csv | CSV feed parsing and export |
+| json | JSON feed parsing and report output |
+| os | File system operations |
+| ipaddress | IP address validation and RFC 1918 filtering |
+| datetime | Timestamping indicators |
+| argparse | Command-line interface |
+
+---
+
+## Future Improvements
 
 Potential enhancements for future development:
 
-Support for STIX/TAXII threat intelligence feeds
-Integration with SIEM platforms (Splunk, ELK)
-Real-time ingestion from OSINT threat feeds
-Web dashboard for IOC visualization
-IOC enrichment using reputation APIs
-Learning Outcomes
+- Support for STIX/TAXII threat intelligence feeds
+- Integration with SIEM platforms (Splunk, ELK)
+- Real-time ingestion from OSINT threat feeds
+- Web dashboard for IOC visualization
+- IOC enrichment using reputation APIs
+
+---
+
+## Learning Outcomes
 
 This project demonstrates practical knowledge of:
 
-Threat Intelligence processing
-Indicator normalization
-Cross-feed correlation
-Blocklist generation
-SOC automation workflows
-Python-based security tooling
-License
+- Threat Intelligence processing and IOC lifecycle
+- Indicator normalization, deduplication, and enrichment
+- Cross-feed correlation techniques used in real SOC platforms
+- Blocklist deployment for firewalls, DNS sinkholes, EDR, and email gateways
+- SOC automation workflows that reduce analyst workload
+- Modular Python-based security tooling and CLI design
+
+---
+
+## License
 
 Educational project developed for internship evaluation.
 
-Unified Mentor Cybersecurity Internship — April 2026
+*Unified Mentor Cybersecurity Internship — April 2026*
