@@ -1,0 +1,103 @@
+==============================================================================
+  THREAT INTELLIGENCE AGGREGATOR — FINAL REPORT
+  Generated : April 29, 2026 at 01:51 UTC
+  TLP       : WHITE
+==============================================================================
+
+1. EXECUTIVE SUMMARY
+------------------------------------------------------------------------------
+  Feed Directory     : ./feeds/
+  Feeds Processed    : 4
+  Total Unique IOCs  : 45
+  Cross-Feed Matches : 14
+  High-Risk (>=50)   : 19
+  Blocklist Files    : 8
+
+2. FEED SOURCES
+------------------------------------------------------------------------------
+  • apt28_feed                                15 IOCs
+  • botnet_c2_feed                            14 IOCs
+  • malware_domains.txt                       17 IOCs
+  • phishing_urls.txt                         22 IOCs
+
+3. IOC TYPE DISTRIBUTION
+------------------------------------------------------------------------------
+  IP           9  █████████
+  DOMAIN      16  ████████████████
+  URL         10  ██████████
+  HASH         4  ████
+  EMAIL        6  ██████
+
+4. SEVERITY BREAKDOWN
+------------------------------------------------------------------------------
+  Critical     6
+  High        13
+  Medium       4
+  Low         22
+
+5. HIGH-RISK INDICATORS  (risk score >= 50)
+------------------------------------------------------------------------------
+  VALUE                                   TYPE      SCORE  SEV       FEEDS
+  ------------------------------------------------------------------------
+  185.220.101.45                          ip           90  Critical  apt28_feed, botnet_c2_feed, malware_domains.txt, phishing_urls.txt
+  194.165.16.78                           ip           80  Critical  apt28_feed, botnet_c2_feed, phishing_urls.txt
+  44d88612fea8a8f36de82e1278abb02f        hash         80  Critical  apt28_feed, botnet_c2_feed, malware_domains.txt
+  91.108.56.100                           ip           80  Critical  apt28_feed, botnet_c2_feed, malware_domains.txt
+  evil-payload.xyz                        domain       80  Critical  botnet_c2_feed, malware_domains.txt, phishing_urls.txt
+  malware-update.com                      domain       80  Critical  apt28_feed, malware_domains.txt, phishing_urls.txt
+  275a021bbfb6489e54d471899f7db9d1663fc695bf6b68d7c20cd1fc2fb52a5f  hash         60  High      apt28_feed, botnet_c2_feed
+  botnet-c2.ru                            domain       60  High      botnet_c2_feed, malware_domains.txt
+  phish@evil-domain.ru                    email        60  High      apt28_feed, phishing_urls.txt
+  ransomware-cdn.ws                       domain       60  High      botnet_c2_feed, malware_domains.txt
+  svchost-update.net                      domain       60  High      apt28_feed, phishing_urls.txt
+  45.142.212.100                          ip           55  High      apt28_feed, botnet_c2_feed, phishing_urls.txt
+  update.fake-microsoft.com               domain       55  High      apt28_feed, malware_domains.txt, phishing_urls.txt
+  aec070645fe53ee3b3763059376134f58cc0c8bd  hash         50  High      apt28_feed
+  https://botnet-c2.ru/gate.php           url          50  High      botnet_c2_feed
+  https://malware-update.com/payload.exe  url          50  High      apt28_feed
+  https://ransomware-cdn.ws/enc_payload.bin  url          50  High      botnet_c2_feed
+  https://svchost-update.net/install.php  url          50  High      apt28_feed
+  ransom-pay@onionmail.org                email        50  High      botnet_c2_feed
+
+6. CROSS-FEED CORRELATED IOCs  (2+ feeds)
+------------------------------------------------------------------------------
+  VALUE                                   TYPE      SCORE  FEEDS
+  ------------------------------------------------------------
+  185.220.101.45                          ip           90  4
+  194.165.16.78                           ip           80  3
+  44d88612fea8a8f36de82e1278abb02f        hash         80  3
+  91.108.56.100                           ip           80  3
+  evil-payload.xyz                        domain       80  3
+  malware-update.com                      domain       80  3
+  275a021bbfb6489e54d471899f7db9d1663fc695bf6b68d7c20cd1fc2fb52a5f  hash         60  2
+  botnet-c2.ru                            domain       60  2
+  phish@evil-domain.ru                    email        60  2
+  ransomware-cdn.ws                       domain       60  2
+  svchost-update.net                      domain       60  2
+  45.142.212.100                          ip           55  3
+  update.fake-microsoft.com               domain       55  3
+  attacker@protonmail.com                 email        35  2
+
+7. BLOCKLIST FILES GENERATED
+------------------------------------------------------------------------------
+  ip_blocklist.txt                           9 entries
+  domain_blocklist.txt                      16 entries
+  url_blocklist.txt                         10 entries
+  hash_blocklist.txt                         4 entries
+  email_blocklist.txt                        6 entries
+  master_blocklist.csv                      45 entries
+  master_blocklist.json                     45 entries
+  high_risk_only.csv                        19 entries
+
+8. RISK SCORING FORMULA
+------------------------------------------------------------------------------
+  Score = Base Severity Score
+        + Feed Bonus  (10 pts per extra feed beyond first, max 30)
+        + Multi-Feed Bonus  (10 pts if seen in 3+ feeds)
+  [capped at 100]
+
+  Critical >= 75  |  High >= 50  |  Medium >= 25  |  Low < 25
+
+==============================================================================
+  END OF REPORT
+==============================================================================

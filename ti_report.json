@@ -1,0 +1,620 @@
+{
+  "meta": {
+    "generated": "2026-04-29T01:51:26Z",
+    "tlp": "WHITE",
+    "tool": "Threat Intelligence Aggregator v1.1"
+  },
+  "summary": {
+    "feeds_processed": 4,
+    "unique_iocs": 45,
+    "cross_feed_matches": 14,
+    "high_risk_count": 19,
+    "blocklist_files": 8
+  },
+  "type_distribution": {
+    "ip": 9,
+    "hash": 4,
+    "domain": 16,
+    "email": 6,
+    "url": 10
+  },
+  "severity_breakdown": {
+    "Critical": 6,
+    "High": 13,
+    "Medium": 4,
+    "Low": 22
+  },
+  "feed_sources": [
+    "apt28_feed",
+    "botnet_c2_feed",
+    "malware_domains.txt",
+    "phishing_urls.txt"
+  ],
+  "high_risk_indicators": [
+    {
+      "value": "185.220.101.45",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "c2",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 4,
+      "base_severity": "High",
+      "risk_score": 90,
+      "severity": "Critical",
+      "description": "Mirai botnet C2 - third feed confirmation; APT28 C2 server - Fancy Bear infrastructure",
+      "first_seen": "2026-04-29T01:51:25.978897+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983371+00:00"
+    },
+    {
+      "value": "194.165.16.78",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Active Cobalt Strike beacon server; C2 beacon endpoint observed in malware traffic",
+      "first_seen": "2026-04-29T01:51:25.978942+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983427+00:00"
+    },
+    {
+      "value": "44d88612fea8a8f36de82e1278abb02f",
+      "type": "hash",
+      "hash_subtype": "md5",
+      "category": "malware",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Mirai botnet binary MD5 - third source confirmation; Eicar test / known malware signature MD5",
+      "first_seen": "2026-04-29T01:51:25.978962+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983463+00:00"
+    },
+    {
+      "value": "91.108.56.100",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "phishing",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Cross-feed confirmed C2 node; Tor exit node used in spearphishing campaign",
+      "first_seen": "2026-04-29T01:51:25.978926+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983389+00:00"
+    },
+    {
+      "value": "evil-payload.xyz",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "general",
+      "sources": [
+        "botnet_c2_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Payload hosting domain seen in multiple feeds",
+      "first_seen": "2026-04-29T01:51:25.979730+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983563+00:00"
+    },
+    {
+      "value": "malware-update.com",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "apt28_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Fake software update domain - malware dropper",
+      "first_seen": "2026-04-29T01:51:25.978946+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983436+00:00"
+    },
+    {
+      "value": "275a021bbfb6489e54d471899f7db9d1663fc695bf6b68d7c20cd1fc2fb52a5f",
+      "type": "hash",
+      "hash_subtype": "sha256",
+      "category": "c2",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "SHA256 APT28 implant binary; Cobalt Strike stager SHA256",
+      "first_seen": "2026-04-29T01:51:25.978969+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983477+00:00"
+    },
+    {
+      "value": "botnet-c2.ru",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "c2",
+      "sources": [
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Active Mirai C2 domain",
+      "first_seen": "2026-04-29T01:51:25.979707+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983524+00:00"
+    },
+    {
+      "value": "phish@evil-domain.ru",
+      "type": "email",
+      "hash_subtype": null,
+      "category": "phishing",
+      "sources": [
+        "apt28_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Credential harvesting email sender",
+      "first_seen": "2026-04-29T01:51:25.978977+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983492+00:00"
+    },
+    {
+      "value": "ransomware-cdn.ws",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Ransomware payload delivery CDN - also in malware_domains feed",
+      "first_seen": "2026-04-29T01:51:25.979709+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983532+00:00"
+    },
+    {
+      "value": "svchost-update.net",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "general",
+      "sources": [
+        "apt28_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Masquerading as Windows service host",
+      "first_seen": "2026-04-29T01:51:25.978950+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983444+00:00"
+    },
+    {
+      "value": "45.142.212.100",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "apt",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "Medium",
+      "risk_score": 55,
+      "severity": "High",
+      "description": "Botnet scanning host; Scanning host linked to APT28",
+      "first_seen": "2026-04-29T01:51:25.978933+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983408+00:00"
+    },
+    {
+      "value": "update.fake-microsoft.com",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "phishing",
+      "sources": [
+        "apt28_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "Medium",
+      "risk_score": 55,
+      "severity": "High",
+      "description": "Phishing domain impersonating Microsoft",
+      "first_seen": "2026-04-29T01:51:25.978957+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983452+00:00"
+    },
+    {
+      "value": "aec070645fe53ee3b3763059376134f58cc0c8bd",
+      "type": "hash",
+      "hash_subtype": "sha1",
+      "category": "malware",
+      "sources": [
+        "apt28_feed"
+      ],
+      "feed_count": 1,
+      "base_severity": "High",
+      "risk_score": 50,
+      "severity": "High",
+      "description": "SHA1 of dropper payload - APT28 toolset",
+      "first_seen": "2026-04-29T01:51:25.978965+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983469+00:00"
+    },
+    {
+      "value": "https://botnet-c2.ru/gate.php",
+      "type": "url",
+      "hash_subtype": null,
+      "category": "c2",
+      "sources": [
+        "botnet_c2_feed"
+      ],
+      "feed_count": 1,
+      "base_severity": "High",
+      "risk_score": 50,
+      "severity": "High",
+      "description": "Botnet check-in / gate URL",
+      "first_seen": "2026-04-29T01:51:25.979715+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983537+00:00"
+    },
+    {
+      "value": "https://malware-update.com/payload.exe",
+      "type": "url",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "apt28_feed"
+      ],
+      "feed_count": 1,
+      "base_severity": "High",
+      "risk_score": 50,
+      "severity": "High",
+      "description": "Dropper download URL",
+      "first_seen": "2026-04-29T01:51:25.978981+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983500+00:00"
+    },
+    {
+      "value": "https://ransomware-cdn.ws/enc_payload.bin",
+      "type": "url",
+      "hash_subtype": null,
+      "category": "ransomware",
+      "sources": [
+        "botnet_c2_feed"
+      ],
+      "feed_count": 1,
+      "base_severity": "High",
+      "risk_score": 50,
+      "severity": "High",
+      "description": "Ransomware encryption module download",
+      "first_seen": "2026-04-29T01:51:25.979722+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983543+00:00"
+    },
+    {
+      "value": "https://svchost-update.net/install.php",
+      "type": "url",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "apt28_feed"
+      ],
+      "feed_count": 1,
+      "base_severity": "High",
+      "risk_score": 50,
+      "severity": "High",
+      "description": "Secondary stage malware URL",
+      "first_seen": "2026-04-29T01:51:25.978984+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983506+00:00"
+    },
+    {
+      "value": "ransom-pay@onionmail.org",
+      "type": "email",
+      "hash_subtype": null,
+      "category": "ransomware",
+      "sources": [
+        "botnet_c2_feed"
+      ],
+      "feed_count": 1,
+      "base_severity": "High",
+      "risk_score": 50,
+      "severity": "High",
+      "description": "Ransomware payment contact address",
+      "first_seen": "2026-04-29T01:51:25.979726+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983554+00:00"
+    }
+  ],
+  "correlated_indicators": [
+    {
+      "value": "185.220.101.45",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "c2",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 4,
+      "base_severity": "High",
+      "risk_score": 90,
+      "severity": "Critical",
+      "description": "Mirai botnet C2 - third feed confirmation; APT28 C2 server - Fancy Bear infrastructure",
+      "first_seen": "2026-04-29T01:51:25.978897+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983371+00:00"
+    },
+    {
+      "value": "194.165.16.78",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Active Cobalt Strike beacon server; C2 beacon endpoint observed in malware traffic",
+      "first_seen": "2026-04-29T01:51:25.978942+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983427+00:00"
+    },
+    {
+      "value": "44d88612fea8a8f36de82e1278abb02f",
+      "type": "hash",
+      "hash_subtype": "md5",
+      "category": "malware",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Mirai botnet binary MD5 - third source confirmation; Eicar test / known malware signature MD5",
+      "first_seen": "2026-04-29T01:51:25.978962+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983463+00:00"
+    },
+    {
+      "value": "91.108.56.100",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "phishing",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Cross-feed confirmed C2 node; Tor exit node used in spearphishing campaign",
+      "first_seen": "2026-04-29T01:51:25.978926+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983389+00:00"
+    },
+    {
+      "value": "evil-payload.xyz",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "general",
+      "sources": [
+        "botnet_c2_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Payload hosting domain seen in multiple feeds",
+      "first_seen": "2026-04-29T01:51:25.979730+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983563+00:00"
+    },
+    {
+      "value": "malware-update.com",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "apt28_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "High",
+      "risk_score": 80,
+      "severity": "Critical",
+      "description": "Fake software update domain - malware dropper",
+      "first_seen": "2026-04-29T01:51:25.978946+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983436+00:00"
+    },
+    {
+      "value": "275a021bbfb6489e54d471899f7db9d1663fc695bf6b68d7c20cd1fc2fb52a5f",
+      "type": "hash",
+      "hash_subtype": "sha256",
+      "category": "c2",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "SHA256 APT28 implant binary; Cobalt Strike stager SHA256",
+      "first_seen": "2026-04-29T01:51:25.978969+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983477+00:00"
+    },
+    {
+      "value": "botnet-c2.ru",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "c2",
+      "sources": [
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Active Mirai C2 domain",
+      "first_seen": "2026-04-29T01:51:25.979707+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983524+00:00"
+    },
+    {
+      "value": "phish@evil-domain.ru",
+      "type": "email",
+      "hash_subtype": null,
+      "category": "phishing",
+      "sources": [
+        "apt28_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Credential harvesting email sender",
+      "first_seen": "2026-04-29T01:51:25.978977+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983492+00:00"
+    },
+    {
+      "value": "ransomware-cdn.ws",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "malware",
+      "sources": [
+        "botnet_c2_feed",
+        "malware_domains.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Ransomware payload delivery CDN - also in malware_domains feed",
+      "first_seen": "2026-04-29T01:51:25.979709+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983532+00:00"
+    },
+    {
+      "value": "svchost-update.net",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "general",
+      "sources": [
+        "apt28_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "High",
+      "risk_score": 60,
+      "severity": "High",
+      "description": "Masquerading as Windows service host",
+      "first_seen": "2026-04-29T01:51:25.978950+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983444+00:00"
+    },
+    {
+      "value": "45.142.212.100",
+      "type": "ip",
+      "hash_subtype": null,
+      "category": "apt",
+      "sources": [
+        "apt28_feed",
+        "botnet_c2_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "Medium",
+      "risk_score": 55,
+      "severity": "High",
+      "description": "Botnet scanning host; Scanning host linked to APT28",
+      "first_seen": "2026-04-29T01:51:25.978933+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983408+00:00"
+    },
+    {
+      "value": "update.fake-microsoft.com",
+      "type": "domain",
+      "hash_subtype": null,
+      "category": "phishing",
+      "sources": [
+        "apt28_feed",
+        "malware_domains.txt",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 3,
+      "base_severity": "Medium",
+      "risk_score": 55,
+      "severity": "High",
+      "description": "Phishing domain impersonating Microsoft",
+      "first_seen": "2026-04-29T01:51:25.978957+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983452+00:00"
+    },
+    {
+      "value": "attacker@protonmail.com",
+      "type": "email",
+      "hash_subtype": null,
+      "category": "phishing",
+      "sources": [
+        "apt28_feed",
+        "phishing_urls.txt"
+      ],
+      "feed_count": 2,
+      "base_severity": "Medium",
+      "risk_score": 35,
+      "severity": "Medium",
+      "description": "Spearphishing sender address",
+      "first_seen": "2026-04-29T01:51:25.978974+00:00",
+      "correlated_at": "2026-04-29T01:51:25.983484+00:00"
+    }
+  ],
+  "blocklist_summary": {
+    "ip_blocklist.txt": 9,
+    "domain_blocklist.txt": 16,
+    "url_blocklist.txt": 10,
+    "hash_blocklist.txt": 4,
+    "email_blocklist.txt": 6,
+    "master_blocklist.csv": 45,
+    "master_blocklist.json": 45,
+    "high_risk_only.csv": 19
+  }
+}
