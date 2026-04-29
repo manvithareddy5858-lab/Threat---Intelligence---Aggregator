@@ -1,0 +1,24 @@
+# Threat Intelligence Aggregator — Requirements
+# ─────────────────────────────────────────────────────────────────────────────
+# This project uses ONLY the Python Standard Library.
+# No external packages are required.
+# Python 3.8 or higher is recommended.
+#
+# Standard library modules used:
+#   re          — IOC pattern extraction via regex
+#   csv         — CSV feed parsing and export
+#   json        — JSON feed parsing and report output
+#   os          — File system operations
+#   sys         — System path and exit
+#   time        — Pipeline runtime measurement
+#   argparse    — Command-line interface
+#   ipaddress   — IP address validation and RFC 1918 filtering
+#   datetime    — Timestamping indicators
+#   hashlib     — Hash format verification
+#   collections — Counter for correlation frequency
+# ─────────────────────────────────────────────────────────────────────────────
+# To run:
+#   python main.py
+#   python main.py --feeds ./feeds/ --output ./output/
+#   python main.py --feeds ./feeds/ --output ./output/ --min-score 50
+# ─────────────────────────────────────────────────────────────────────────────
