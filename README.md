@@ -40,7 +40,6 @@ Security teams rely on threat intelligence feeds from multiple sources to detect
 ### python run cmd 2
 ![python run cmd 2](images/python run cmd 2.png)
 
-
 **This tool automates that entire workflow.**
 
 **Give it a folder of threat feeds → it produces cleaned blocklists and a full intelligence report.**
