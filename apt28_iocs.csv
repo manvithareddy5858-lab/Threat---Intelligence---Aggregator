@@ -1,0 +1,19 @@
+indicator,type,severity,source,description
+185.220.101.45,ip,High,apt28_feed,APT28 C2 server - Fancy Bear infrastructure
+91.108.56.100,ip,High,apt28_feed,Tor exit node used in spearphishing campaign
+45.142.212.100,ip,Medium,apt28_feed,Scanning host linked to APT28
+185.220.101.32,ip,Medium,apt28_feed,Known Tor exit relay
+194.165.16.78,ip,High,apt28_feed,C2 beacon endpoint observed in malware traffic
+malware-update.com,domain,High,apt28_feed,Fake software update domain - malware dropper
+svchost-update.net,domain,High,apt28_feed,Masquerading as Windows service host
+update.fake-microsoft.com,domain,Medium,apt28_feed,Phishing domain impersonating Microsoft
+44d88612fea8a8f36de82e1278abb02f,hash,High,apt28_feed,Eicar test / known malware signature MD5
+aec070645fe53ee3b3763059376134f58cc0c8bd,hash,High,apt28_feed,SHA1 of dropper payload - APT28 toolset
+275a021bbfb6489e54d471899f7db9d1663fc695bf6b68d7c20cd1fc2fb52a5f,hash,High,apt28_feed,SHA256 APT28 implant binary
+attacker@protonmail.com,email,Medium,apt28_feed,Spearphishing sender address
+phish@evil-domain.ru,email,High,apt28_feed,Credential harvesting email sender
+https://malware-update.com/payload.exe,url,High,apt28_feed,Dropper download URL
+https://svchost-update.net/install.php,url,High,apt28_feed,Secondary stage malware URL
+192.168.1.1,ip,Low,apt28_feed,Private IP - should be filtered
+127.0.0.1,ip,Low,apt28_feed,Loopback - should be filtered
+10.0.0.5,ip,Low,apt28_feed,RFC1918 - should be filtered

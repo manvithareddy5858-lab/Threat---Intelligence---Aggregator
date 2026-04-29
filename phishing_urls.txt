@@ -1,0 +1,26 @@
+# Phishing URL & Domain Blocklist
+# Source: phishing_urls_feed.txt
+# Format: One IOC per line
+
+# ── Phishing URLs ─────────────────────────────────────────────────────────────
+https://update.fake-microsoft.com/login
+https://malware-update.com/office365/signin.html
+https://svchost-update.net/verify.php
+https://evil-payload.xyz/credential-harvest
+
+# ── Phishing Domains ──────────────────────────────────────────────────────────
+secure-login-paypal.xyz
+accounts-google-verify.com
+microsoft-account-alert.net
+update.fake-microsoft.com
+
+# ── Phishing sender IPs ───────────────────────────────────────────────────────
+185.220.101.45
+45.142.212.100
+194.165.16.78
+
+# ── Phishing email senders ────────────────────────────────────────────────────
+noreply@secure-login-paypal.xyz
+support@accounts-google-verify.com
+phish@evil-domain.ru
+attacker@protonmail.com

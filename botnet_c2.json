@@ -1,0 +1,106 @@
+{
+  "feed_name": "Botnet C2 Intelligence Feed",
+  "provider": "botnet_c2_feed",
+  "tlp": "WHITE",
+  "updated": "2026-04-01T00:00:00Z",
+  "indicators": [
+    {
+      "indicator": "185.220.101.45",
+      "type": "ip",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Mirai botnet C2 - third feed confirmation"
+    },
+    {
+      "indicator": "45.142.212.100",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "botnet_c2_feed",
+      "description": "Botnet scanning host"
+    },
+    {
+      "indicator": "194.165.16.78",
+      "type": "ip",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Active Cobalt Strike beacon server"
+    },
+    {
+      "indicator": "176.10.104.240",
+      "type": "ip",
+      "severity": "Medium",
+      "source": "botnet_c2_feed",
+      "description": "Tor exit relay used in botnet traffic"
+    },
+    {
+      "indicator": "botnet-c2.ru",
+      "type": "domain",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Active Mirai C2 domain"
+    },
+    {
+      "indicator": "ransomware-cdn.ws",
+      "type": "domain",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Ransomware payload delivery CDN - also in malware_domains feed"
+    },
+    {
+      "indicator": "44d88612fea8a8f36de82e1278abb02f",
+      "type": "hash",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Mirai botnet binary MD5 - third source confirmation"
+    },
+    {
+      "indicator": "275a021bbfb6489e54d471899f7db9d1663fc695bf6b68d7c20cd1fc2fb52a5f",
+      "type": "hash",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Cobalt Strike stager SHA256"
+    },
+    {
+      "indicator": "https://botnet-c2.ru/gate.php",
+      "type": "url",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Botnet check-in / gate URL"
+    },
+    {
+      "indicator": "https://ransomware-cdn.ws/enc_payload.bin",
+      "type": "url",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Ransomware encryption module download"
+    },
+    {
+      "indicator": "bot-operator@protonmail.com",
+      "type": "email",
+      "severity": "Medium",
+      "source": "botnet_c2_feed",
+      "description": "Botnet operator contact email seen in ransom notes"
+    },
+    {
+      "indicator": "ransom-pay@onionmail.org",
+      "type": "email",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Ransomware payment contact address"
+    },
+    {
+      "indicator": "91.108.56.100",
+      "type": "ip",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Cross-feed confirmed C2 node"
+    },
+    {
+      "indicator": "evil-payload.xyz",
+      "type": "domain",
+      "severity": "High",
+      "source": "botnet_c2_feed",
+      "description": "Payload hosting domain seen in multiple feeds"
+    }
+  ]
+}
