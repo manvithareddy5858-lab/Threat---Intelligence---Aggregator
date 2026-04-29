@@ -330,6 +330,4 @@ This project demonstrates practical knowledge of:
 
 ## License
 
-Educational project developed for internship evaluation.
-
 *Unified Mentor Cybersecurity Internship — April 2026*
