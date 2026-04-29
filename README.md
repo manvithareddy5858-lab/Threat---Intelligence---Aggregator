@@ -34,11 +34,6 @@ Security teams rely on threat intelligence feeds from multiple sources to detect
 ### Threat Intelligence Results
 ![Repository](images/Repository.png)
 
-### python run cmd 1
-![Repository](images/python run cmd 1.png)
-
-### python run cmd 2
-![Repository](images/python run cmd 2.png)
 
 **This tool automates that entire workflow.**
 
