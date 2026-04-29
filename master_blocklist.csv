@@ -1,0 +1,46 @@
+value,type,hash_subtype,category,risk_score,severity,feed_count,sources,description,first_seen
+185.220.101.45,ip,,c2,90,Critical,4,apt28_feed|botnet_c2_feed|malware_domains.txt|phishing_urls.txt,Mirai botnet C2 - third feed confirmation; APT28 C2 server - Fancy Bear infrastructure,2026-04-29T01:51:25.978897+00:00
+194.165.16.78,ip,,malware,80,Critical,3,apt28_feed|botnet_c2_feed|phishing_urls.txt,Active Cobalt Strike beacon server; C2 beacon endpoint observed in malware traffic,2026-04-29T01:51:25.978942+00:00
+44d88612fea8a8f36de82e1278abb02f,hash,md5,malware,80,Critical,3,apt28_feed|botnet_c2_feed|malware_domains.txt,Mirai botnet binary MD5 - third source confirmation; Eicar test / known malware signature MD5,2026-04-29T01:51:25.978962+00:00
+91.108.56.100,ip,,phishing,80,Critical,3,apt28_feed|botnet_c2_feed|malware_domains.txt,Cross-feed confirmed C2 node; Tor exit node used in spearphishing campaign,2026-04-29T01:51:25.978926+00:00
+evil-payload.xyz,domain,,general,80,Critical,3,botnet_c2_feed|malware_domains.txt|phishing_urls.txt,Payload hosting domain seen in multiple feeds,2026-04-29T01:51:25.979730+00:00
+malware-update.com,domain,,malware,80,Critical,3,apt28_feed|malware_domains.txt|phishing_urls.txt,Fake software update domain - malware dropper,2026-04-29T01:51:25.978946+00:00
+275a021bbfb6489e54d471899f7db9d1663fc695bf6b68d7c20cd1fc2fb52a5f,hash,sha256,c2,60,High,2,apt28_feed|botnet_c2_feed,SHA256 APT28 implant binary; Cobalt Strike stager SHA256,2026-04-29T01:51:25.978969+00:00
+botnet-c2.ru,domain,,c2,60,High,2,botnet_c2_feed|malware_domains.txt,Active Mirai C2 domain,2026-04-29T01:51:25.979707+00:00
+phish@evil-domain.ru,email,,phishing,60,High,2,apt28_feed|phishing_urls.txt,Credential harvesting email sender,2026-04-29T01:51:25.978977+00:00
+ransomware-cdn.ws,domain,,malware,60,High,2,botnet_c2_feed|malware_domains.txt,Ransomware payload delivery CDN - also in malware_domains feed,2026-04-29T01:51:25.979709+00:00
+svchost-update.net,domain,,general,60,High,2,apt28_feed|phishing_urls.txt,Masquerading as Windows service host,2026-04-29T01:51:25.978950+00:00
+45.142.212.100,ip,,apt,55,High,3,apt28_feed|botnet_c2_feed|phishing_urls.txt,Botnet scanning host; Scanning host linked to APT28,2026-04-29T01:51:25.978933+00:00
+update.fake-microsoft.com,domain,,phishing,55,High,3,apt28_feed|malware_domains.txt|phishing_urls.txt,Phishing domain impersonating Microsoft,2026-04-29T01:51:25.978957+00:00
+aec070645fe53ee3b3763059376134f58cc0c8bd,hash,sha1,malware,50,High,1,apt28_feed,SHA1 of dropper payload - APT28 toolset,2026-04-29T01:51:25.978965+00:00
+https://botnet-c2.ru/gate.php,url,,c2,50,High,1,botnet_c2_feed,Botnet check-in / gate URL,2026-04-29T01:51:25.979715+00:00
+https://malware-update.com/payload.exe,url,,malware,50,High,1,apt28_feed,Dropper download URL,2026-04-29T01:51:25.978981+00:00
+https://ransomware-cdn.ws/enc_payload.bin,url,,ransomware,50,High,1,botnet_c2_feed,Ransomware encryption module download,2026-04-29T01:51:25.979722+00:00
+https://svchost-update.net/install.php,url,,malware,50,High,1,apt28_feed,Secondary stage malware URL,2026-04-29T01:51:25.978984+00:00
+ransom-pay@onionmail.org,email,,ransomware,50,High,1,botnet_c2_feed,Ransomware payment contact address,2026-04-29T01:51:25.979726+00:00
+attacker@protonmail.com,email,,phishing,35,Medium,2,apt28_feed|phishing_urls.txt,Spearphishing sender address,2026-04-29T01:51:25.978974+00:00
+176.10.104.240,ip,,botnet,25,Medium,1,botnet_c2_feed,Tor exit relay used in botnet traffic,2026-04-29T01:51:25.979706+00:00
+185.220.101.32,ip,,tor,25,Medium,1,apt28_feed,Known Tor exit relay,2026-04-29T01:51:25.978937+00:00
+bot-operator@protonmail.com,email,,ransomware,25,Medium,1,botnet_c2_feed,Botnet operator contact email seen in ransom notes,2026-04-29T01:51:25.979724+00:00
+192.42.116.16,ip,,general,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980556+00:00
+23.129.64.218,ip,,general,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980544+00:00
+77.247.181.163,ip,,general,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980517+00:00
+accounts-google-verify.com,domain,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981060+00:00
+da39a3ee5e6b4b0d3255bfef95601890afd80709,hash,sha1,general,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980581+00:00
+dropper.zip,domain,,malware,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980623+00:00
+evil-domain.ru,domain,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981129+00:00
+https://evil-payload.xyz/credential-harvest,url,,phishing,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981033+00:00
+https://evil-payload.xyz/dropper.zip,url,,malware,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980589+00:00
+https://malware-update.com/office365/signin.html,url,,malware,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.980953+00:00
+https://ransomware-cdn.ws/locker.exe,url,,ransomware,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980629+00:00
+https://svchost-update.net/verify.php,url,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.980970+00:00
+https://update.fake-microsoft.com/login,url,,phishing,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.980938+00:00
+locker.exe,domain,,general,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980646+00:00
+malicious-redirect.top,domain,,general,10,Low,1,malware_domains.txt,,2026-04-29T01:51:25.980386+00:00
+microsoft-account-alert.net,domain,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981067+00:00
+noreply@secure-login-paypal.xyz,email,,phishing,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981101+00:00
+protonmail.com,domain,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981141+00:00
+secure-login-paypal.xyz,domain,,phishing,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981053+00:00
+signin.html,domain,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.980966+00:00
+support@accounts-google-verify.com,email,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.981111+00:00
+verify.php,domain,,general,10,Low,1,phishing_urls.txt,,2026-04-29T01:51:25.980985+00:00

@@ -1,0 +1,24 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Threat Intelligence Aggregator — Blocklist
+# Generated : 2026-04-29T01:51:25Z
+# Entries   : 16
+# Type      : DOMAIN
+# Usage     : Pi-hole / DNS sinkhole / Windows HOSTS file
+# TLP       : WHITE
+# ─────────────────────────────────────────────────────────────────────────────
+accounts-google-verify.com
+botnet-c2.ru
+dropper.zip
+evil-domain.ru
+evil-payload.xyz
+locker.exe
+malicious-redirect.top
+malware-update.com
+microsoft-account-alert.net
+protonmail.com
+ransomware-cdn.ws
+secure-login-paypal.xyz
+signin.html
+svchost-update.net
+update.fake-microsoft.com
+verify.php
