@@ -300,8 +300,6 @@ These indicators represent potentially malicious activity collected from multipl
 ---
 
 ## Live Demo
-
-🔗 [Open Threat Intelligence Dashboard](https://manvithareddy5858-lab.github.io/Threat---Intelligence---Aggregator/dashboard.html)
 🔗 [Open Deployed Threat Intelligence Aggregator](https://manvithareddy5858-lab.github.io/Threat---Intelligence---Aggregator/)
 
 ## Future Improvements
