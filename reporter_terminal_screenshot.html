@@ -1,0 +1,72 @@
+
+<style>
+  .term-wrap { background:#0c0c0c; font-family:'Courier New',monospace; font-size:13px; color:#cccccc; padding:0; border-radius:6px; overflow:hidden; width:100%; }
+  .term-bar { background:#1f1f1f; padding:8px 14px; border-bottom:1px solid #333; }
+  .term-bar span { color:#aaa; font-size:12px; font-family:'Courier New',monospace; }
+  .term-body { padding:14px 16px; line-height:1.7; }
+  .prompt { color:#00ff41; }
+  .cmd { color:#ffffff; }
+  .ok { color:#00c853; }
+  .info { color:#40c4ff; }
+  .warn { color:#ffd740; }
+  .dim { color:#888; }
+  .sep { color:#444; }
+  .file { color:#ce93d8; }
+  .high { color:#ff5252; }
+  .med { color:#ffd740; }
+  .low { color:#69f0ae; }
+</style>
+<div class="term-wrap">
+  <div class="term-bar">
+    <span>Command Prompt — Threat Intelligence Aggregator</span>
+  </div>
+  <div class="term-body">
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span> <span class="cmd">python reporter.py</span></div>
+    <div>&nbsp;</div>
+    <div><span class="info">============================================================</span></div>
+    <div><span class="info">    THREAT INTELLIGENCE AGGREGATOR — REPORT GENERATOR       </span></div>
+    <div><span class="info">============================================================</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Loading IOC database and correlation results...</div>
+    <div><span class="ok">[+]</span> Generating threat intelligence report...</div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> FINAL THREAT INTELLIGENCE REPORT</div>
+    <div><span class="dim">    Generated: 2026-04-30 | Unified Mentor Cybersecurity Internship</span></div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>&nbsp;</div>
+    <div>    Feeds Processed              : <span class="warn">4</span></div>
+    <div>    Raw IOCs Collected           : <span class="warn">57</span></div>
+    <div>    Valid Unique IOCs            : <span class="warn">35</span></div>
+    <div>    Correlated (2+ feeds)        : <span class="warn">13</span></div>
+    <div>&nbsp;</div>
+    <div>    Severity Breakdown:</div>
+    <div>        High-risk  (score ≥ 50)  : <span class="high">3</span></div>
+    <div>        Medium-risk(score 25–49) : <span class="med">10</span></div>
+    <div>        Low-risk   (score &lt; 25)  : <span class="low">22</span></div>
+    <div>&nbsp;</div>
+    <div>    IOC Type Breakdown:</div>
+    <div>        IP Addresses             : <span class="ok">15</span>  <span class="dim">(43%)</span></div>
+    <div>        Domains                  : <span class="ok">6</span>   <span class="dim">(17%)</span></div>
+    <div>        URLs                     : <span class="ok">5</span>   <span class="dim">(14%)</span></div>
+    <div>        File Hashes              : <span class="ok">5</span>   <span class="dim">(14%)</span></div>
+    <div>        Email Addresses          : <span class="ok">4</span>   <span class="dim">(11%)</span></div>
+    <div>&nbsp;</div>
+    <div>    Top High-Risk Indicators:</div>
+    <div>        <span class="high">185.220.101.45</span>         Score: 70  Feeds: 4  [IP]</div>
+    <div>        <span class="high">44d88612fea8a8f36...</span>   Score: 60  Feeds: 3  [HASH]</div>
+    <div>        <span class="high">ransomware-c2.ru</span>       Score: 50  Feeds: 2  [DOMAIN]</div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Writing report files...</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[✓]</span> <span class="file">ti_report.txt</span>       — Human-readable TI report</div>
+    <div><span class="ok">[✓]</span> <span class="file">ti_report.json</span>      — Machine-readable JSON report</div>
+    <div><span class="ok">[✓]</span> <span class="file">ioc_database.csv</span>    — Complete IOC spreadsheet (35 rows)</div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[✓]</span> Pipeline complete. Runtime: <span class="warn">0.41 seconds</span></div>
+    <div>&nbsp;</div>
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span></div>
+  </div>
+</div>

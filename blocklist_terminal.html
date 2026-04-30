@@ -1,0 +1,54 @@
+
+<style>
+  .term-wrap { background:#0c0c0c; font-family:'Courier New',monospace; font-size:13px; color:#cccccc; padding:0; border-radius:6px; overflow:hidden; width:100%; }
+  .term-bar { background:#1f1f1f; padding:8px 14px; border-bottom:1px solid #333; }
+  .term-bar span { color:#aaa; font-size:12px; font-family:'Courier New',monospace; }
+  .term-body { padding:14px 16px; line-height:1.7; }
+  .prompt { color:#00ff41; }
+  .cmd { color:#ffffff; }
+  .ok { color:#00c853; }
+  .info { color:#40c4ff; }
+  .warn { color:#ffd740; }
+  .dim { color:#888; }
+  .sep { color:#444; }
+  .file { color:#ce93d8; }
+</style>
+<div class="term-wrap">
+  <div class="term-bar">
+    <span>Command Prompt — Threat Intelligence Aggregator</span>
+  </div>
+  <div class="term-body">
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span> <span class="cmd">python blocklist_gen.py</span></div>
+    <div>&nbsp;</div>
+    <div><span class="info">============================================================</span></div>
+    <div><span class="info">    THREAT INTELLIGENCE AGGREGATOR — BLOCKLIST GENERATOR    </span></div>
+    <div><span class="info">============================================================</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Loading correlated IOC database (35 indicators)...</div>
+    <div><span class="ok">[+]</span> Generating deployment-ready blocklist files...</div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Writing blocklist files...</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[✓]</span> <span class="file">ip_blocklist.txt</span>         — <span class="warn">15</span> entries  <span class="dim">[iptables / pfSense / Palo Alto]</span></div>
+    <div><span class="ok">[✓]</span> <span class="file">domain_blocklist.txt</span>     — <span class="warn">6</span> entries   <span class="dim">[Pi-hole / DNS sinkhole]</span></div>
+    <div><span class="ok">[✓]</span> <span class="file">url_blocklist.txt</span>        — <span class="warn">5</span> entries   <span class="dim">[Squid Proxy / Nginx deny]</span></div>
+    <div><span class="ok">[✓]</span> <span class="file">hash_blocklist.txt</span>       — <span class="warn">5</span> entries   <span class="dim">[CrowdStrike / Defender / YARA]</span></div>
+    <div><span class="ok">[✓]</span> <span class="file">email_blocklist.txt</span>      — <span class="warn">4</span> entries   <span class="dim">[SpamAssassin / M365 / Postfix]</span></div>
+    <div><span class="ok">[✓]</span> <span class="file">master_blocklist.csv</span>     — <span class="warn">35</span> entries  <span class="dim">[SIEM ingestion — all IOC types]</span></div>
+    <div><span class="ok">[✓]</span> <span class="file">master_blocklist.json</span>    — <span class="warn">35</span> entries  <span class="dim">[API / SOAR platform integration]</span></div>
+    <div><span class="ok">[✓]</span> <span class="file">high_risk_only.csv</span>       — <span class="warn">3</span> entries   <span class="dim">[Immediate response — score ≥ 50]</span></div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Blocklist generation summary</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>    Total blocklist files created  : <span class="ok">8</span></div>
+    <div>    Total entries written          : <span class="warn">73</span>  <span class="dim">(including duplicates across type files)</span></div>
+    <div>    High-priority entries          : <span class="warn">3</span>   <span class="dim">(score ≥ 50)</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[✓]</span> All blocklist files saved. Ready for deployment.</div>
+    <div>&nbsp;</div>
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span></div>
+  </div>
+</div>

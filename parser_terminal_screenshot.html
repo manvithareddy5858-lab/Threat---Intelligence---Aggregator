@@ -1,0 +1,65 @@
+
+<style>
+  .term-wrap { background:#0c0c0c; font-family:'Courier New',monospace; font-size:13px; color:#cccccc; padding:0; border-radius:6px; overflow:hidden; width:100%; }
+  .term-bar { background:#1f1f1f; padding:8px 14px; display:flex; align-items:center; gap:8px; border-bottom:1px solid #333; }
+  .term-bar span { color:#aaa; font-size:12px; font-family:'Courier New',monospace; }
+  .term-body { padding:14px 16px; line-height:1.7; }
+  .prompt { color:#00ff41; }
+  .cmd { color:#ffffff; }
+  .ok { color:#00c853; }
+  .info { color:#40c4ff; }
+  .warn { color:#ffd740; }
+  .dim { color:#888; }
+  .sep { color:#444; }
+</style>
+<div class="term-wrap">
+  <div class="term-bar">
+    <span>Command Prompt — Threat Intelligence Aggregator</span>
+  </div>
+  <div class="term-body">
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span> <span class="cmd">python parser.py</span></div>
+    <div>&nbsp;</div>
+    <div><span class="info">============================================================</span></div>
+    <div><span class="info">        THREAT INTELLIGENCE AGGREGATOR — IOC PARSER         </span></div>
+    <div><span class="info">============================================================</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Loading threat intelligence feeds...</div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Feed 1 loaded: <span class="cmd">apt28_iocs.csv</span>  <span class="dim">[Format: CSV]</span></div>
+    <div><span class="ok">[+]</span> Feed 2 loaded: <span class="cmd">botnet_c2.json</span>  <span class="dim">[Format: JSON]</span></div>
+    <div><span class="ok">[+]</span> Feed 3 loaded: <span class="cmd">phishing_urls.txt</span>  <span class="dim">[Format: TXT]</span></div>
+    <div><span class="ok">[+]</span> Feed 4 loaded: <span class="cmd">malware_domains.txt</span>  <span class="dim">[Format: TXT]</span></div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Parsing indicators from all feeds...</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> apt28_iocs.csv   → Extracted <span class="warn">18</span> IOCs</div>
+    <div>    <span class="dim">IP Addresses : 10 | Domains : 4 | Hashes : 3 | Emails : 1</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> botnet_c2.json   → Extracted <span class="warn">14</span> IOCs</div>
+    <div>    <span class="dim">IP Addresses : 9  | Domains : 3 | URLs   : 2</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> phishing_urls.txt → Extracted <span class="warn">13</span> IOCs</div>
+    <div>    <span class="dim">URLs         : 8  | Domains : 3 | Emails : 2</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> malware_domains.txt → Extracted <span class="warn">12</span> IOCs</div>
+    <div>    <span class="dim">Domains      : 6  | IP Addresses : 4 | Hashes : 2</span></div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Parser summary</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>    Total feeds processed  : <span class="warn">4</span></div>
+    <div>    Total raw IOCs found   : <span class="warn">57</span></div>
+    <div>    IOC type breakdown:</div>
+    <div>        IP Addresses       : <span class="ok">23</span></div>
+    <div>        Domains            : <span class="ok">16</span></div>
+    <div>        URLs               : <span class="ok">10</span></div>
+    <div>        File Hashes        : <span class="ok">5</span></div>
+    <div>        Email Addresses    : <span class="ok">3</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[✓]</span> Parsing complete. Raw IOCs passed to normalizer.</div>
+    <div>&nbsp;</div>
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span></div>
+  </div>
+</div>

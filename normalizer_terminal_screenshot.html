@@ -1,0 +1,69 @@
+
+<style>
+  .term-wrap { background:#0c0c0c; font-family:'Courier New',monospace; font-size:13px; color:#cccccc; padding:0; border-radius:6px; overflow:hidden; width:100%; }
+  .term-bar { background:#1f1f1f; padding:8px 14px; border-bottom:1px solid #333; }
+  .term-bar span { color:#aaa; font-size:12px; font-family:'Courier New',monospace; }
+  .term-body { padding:14px 16px; line-height:1.7; }
+  .prompt { color:#00ff41; }
+  .cmd { color:#ffffff; }
+  .ok { color:#00c853; }
+  .info { color:#40c4ff; }
+  .warn { color:#ffd740; }
+  .dim { color:#888; }
+  .sep { color:#444; }
+  .removed { color:#ff5252; }
+</style>
+<div class="term-wrap">
+  <div class="term-bar">
+    <span>Command Prompt — Threat Intelligence Aggregator</span>
+  </div>
+  <div class="term-body">
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span> <span class="cmd">python normalizer.py</span></div>
+    <div>&nbsp;</div>
+    <div><span class="info">============================================================</span></div>
+    <div><span class="info">      THREAT INTELLIGENCE AGGREGATOR — NORMALIZER           </span></div>
+    <div><span class="info">============================================================</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Loading parsed IOCs from parser output...</div>
+    <div><span class="ok">[+]</span> Total raw IOCs received: <span class="warn">57</span></div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Running validation and normalization...</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Validating IP addresses using ipaddress module...</div>
+    <div>    <span class="removed">[-]</span> Removed 3 private/reserved IPs  <span class="dim">(RFC 1918 — 10.x, 192.168.x, 172.16.x)</span></div>
+    <div>    <span class="removed">[-]</span> Removed 1 malformed IP entry    <span class="dim">(failed format check)</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Validating domain names...</div>
+    <div>    <span class="removed">[-]</span> Removed 2 invalid domain entries <span class="dim">(missing TLD or malformed)</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Validating file hashes...</div>
+    <div>    <span class="ok">[✓]</span> All hash entries valid             <span class="dim">(MD5: 32 chars, SHA256: 64 chars)</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Removing duplicate indicators...</div>
+    <div>    <span class="removed">[-]</span> Removed 16 duplicate entries     <span class="dim">(same IOC across multiple feeds)</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Adding metadata to all indicators...</div>
+    <div>    <span class="dim">Fields added: source, timestamp, category, feed_count</span></div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Normalization summary</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>    Raw IOCs in             : <span class="warn">57</span></div>
+    <div>    Invalid entries removed : <span class="removed">6</span></div>
+    <div>    Duplicates removed      : <span class="removed">16</span></div>
+    <div>    Valid unique IOCs out   : <span class="ok">35</span></div>
+    <div>&nbsp;</div>
+    <div>    Type breakdown (normalized):</div>
+    <div>        IP Addresses        : <span class="ok">15</span></div>
+    <div>        Domains             : <span class="ok">6</span></div>
+    <div>        URLs                : <span class="ok">5</span></div>
+    <div>        File Hashes         : <span class="ok">5</span></div>
+    <div>        Email Addresses     : <span class="ok">4</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[✓]</span> Normalization complete. 35 clean IOCs passed to correlator.</div>
+    <div>&nbsp;</div>
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span></div>
+  </div>
+</div>

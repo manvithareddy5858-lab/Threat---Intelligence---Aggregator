@@ -1,0 +1,65 @@
+
+<style>
+  .term-wrap { background:#0c0c0c; font-family:'Courier New',monospace; font-size:13px; color:#cccccc; padding:0; border-radius:6px; overflow:hidden; width:100%; }
+  .term-bar { background:#1f1f1f; padding:8px 14px; border-bottom:1px solid #333; }
+  .term-bar span { color:#aaa; font-size:12px; font-family:'Courier New',monospace; }
+  .term-body { padding:14px 16px; line-height:1.7; }
+  .prompt { color:#00ff41; }
+  .cmd { color:#ffffff; }
+  .ok { color:#00c853; }
+  .info { color:#40c4ff; }
+  .warn { color:#ffd740; }
+  .dim { color:#888; }
+  .sep { color:#444; }
+  .high { color:#ff5252; }
+  .med { color:#ffd740; }
+  .low { color:#69f0ae; }
+</style>
+<div class="term-wrap">
+  <div class="term-bar">
+    <span>Command Prompt — Threat Intelligence Aggregator</span>
+  </div>
+  <div class="term-body">
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span> <span class="cmd">python correlator.py</span></div>
+    <div>&nbsp;</div>
+    <div><span class="info">============================================================</span></div>
+    <div><span class="info">    THREAT INTELLIGENCE AGGREGATOR — CORRELATION ENGINE      </span></div>
+    <div><span class="info">============================================================</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Loading 35 normalized IOCs...</div>
+    <div><span class="ok">[+]</span> Running cross-feed correlation...</div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Scoring indicators — Formula: base + (feeds×10) + bonus</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[+]</span> Processing 35 indicators across 4 feeds...</div>
+    <div>    13 indicators found in multiple feeds</div>
+    <div>    22 indicators found in single feed only</div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Top correlated indicators (by risk score)</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>&nbsp;</div>
+    <div>  <span class="high">[HIGH]</span>  185.220.101.45      Score: <span class="high">70</span>  Feeds: 4  Type: IP</div>
+    <div>  <span class="high">[HIGH]</span>  44d88612fea8a8...   Score: <span class="high">60</span>  Feeds: 3  Type: HASH</div>
+    <div>  <span class="high">[HIGH]</span>  ransomware-c2.ru    Score: <span class="high">50</span>  Feeds: 2  Type: DOMAIN</div>
+    <div>  <span class="med">[MED]</span>   185.220.101.72      Score: <span class="med">40</span>  Feeds: 2  Type: IP</div>
+    <div>  <span class="med">[MED]</span>   phish-login.net     Score: <span class="med">35</span>  Feeds: 2  Type: DOMAIN</div>
+    <div>  <span class="med">[MED]</span>   91.108.4.172        Score: <span class="med">30</span>  Feeds: 2  Type: IP</div>
+    <div>  <span class="med">[MED]</span>   evil-update.com     Score: <span class="med">25</span>  Feeds: 2  Type: DOMAIN</div>
+    <div>&nbsp;</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div><span class="info">[*]</span> Correlation summary</div>
+    <div><span class="sep">------------------------------------------------------------</span></div>
+    <div>    Total IOCs scored          : <span class="warn">35</span></div>
+    <div>    Correlated (2+ feeds)      : <span class="warn">13</span></div>
+    <div>    High-risk (score ≥ 50)     : <span class="high">3</span></div>
+    <div>    Medium-risk (score 25–49)  : <span class="med">10</span></div>
+    <div>    Low-risk (score &lt; 25)      : <span class="low">22</span></div>
+    <div>&nbsp;</div>
+    <div><span class="ok">[✓]</span> Correlation complete. Scores written to ioc_database.csv</div>
+    <div>&nbsp;</div>
+    <div><span class="prompt">C:\Users\Manvitha\Threat---Intelligence---Aggregator&gt;</span></div>
+  </div>
+</div>
