@@ -25,18 +25,6 @@ from correlator    import correlate
 from blocklist_gen import generate_blocklists
 from reporter      import generate_reports
 
-BANNER = r"""
- ████████╗██╗     ██████╗  █████╗  ██████╗  ██████╗ ██████╗ ███████╗ ██╗
-    ██╔══╝██║    ██╔════╝ ██╔══██╗██╔════╝ ██╔════╝██╔════╝ ██╔════╝ ██║
-    ██║   ██║    ███████╗ ███████║██║  ███╗██║  ███╗█████╗   ██████╗  ██║
-    ██║   ██║    ╚════██║ ██╔══██║██║   ██║██║   ██║██╔══╝    ╚═══██╗ ╚═╝
-    ██║   ██║    ███████║ ██║  ██║╚██████╔╝╚██████╔╝███████╗ ██████╔╝ ██╗
-    ╚═╝   ╚═╝    ╚══════╝ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝ ╚═════╝  ╚═╝
-
-  Threat Intelligence Aggregator v1.1 | Non-AI, Rule-Based | TLP:WHITE
-  Unified Mentor Cybersecurity Internship — Blue Team / SOC Track
-"""
-
 
 def parse_args():
     p = argparse.ArgumentParser(
@@ -55,7 +43,6 @@ Examples:
 
 
 def main():
-    print(BANNER)
     args = parse_args()
 
     start = time.time()
