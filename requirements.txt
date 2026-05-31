@@ -22,3 +22,8 @@
 #   python main.py --feeds ./feeds/ --output ./output/
 #   python main.py --feeds ./feeds/ --output ./output/ --min-score 50
 # ─────────────────────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# Testing dependencies (CI only — not needed to run the project)
+# ─────────────────────────────────────────────────────────────────────────────
+pytest>=7.0
+pytest-cov>=4.0
