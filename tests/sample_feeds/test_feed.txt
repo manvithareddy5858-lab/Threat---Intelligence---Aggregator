@@ -1,0 +1,8 @@
+# Malware IP blocklist - test feed
+185.220.101.46
+# Another bad actor
+10.11.12.200
+http://malicious-payload.xyz/dropper.exe
+# Comment line - should be ignored
+bad-domain-c2.ru
+attacker2@spam.net
