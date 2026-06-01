@@ -1,0 +1,8 @@
+indicator,type,severity,source,description
+185.220.101.45,ip,High,test_feed,Known Tor exit node
+malware-c2.evil.ru,domain,Critical,test_feed,APT28 C2 domain
+http://phishing-site.net/login.php,url,High,test_feed,Credential phishing page
+44d88612fea8a8f36de82e1278abb02f,hash,Medium,test_feed,Emotet dropper MD5
+attacker@evil-domain.ru,email,Low,test_feed,Spam sender
+192.168.1.1,ip,High,test_feed,Private IP should be filtered
+google.com,domain,High,test_feed,Whitelisted domain should be filtered
