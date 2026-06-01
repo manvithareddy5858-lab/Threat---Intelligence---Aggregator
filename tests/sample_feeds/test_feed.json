@@ -1,32 +1,8 @@
 {
   "indicators": [
-    {
-      "indicator": "185.220.101.47",
-      "type": "ip",
-      "severity": "High",
-      "source": "botnet_feed",
-      "description": "Botnet C2 server"
-    },
-    {
-      "indicator": "ransomware-stage2.tk",
-      "type": "domain",
-      "severity": "Critical",
-      "source": "botnet_feed",
-      "description": "Ransomware staging domain"
-    },
-    {
-      "indicator": "aabbccddeeff00112233445566778899",
-      "type": "hash",
-      "severity": "High",
-      "source": "botnet_feed",
-      "description": "Malware SHA256 partial"
-    },
-    {
-      "indicator": "185.220.101.45",
-      "type": "ip",
-      "severity": "Critical",
-      "source": "botnet_feed",
-      "description": "Cross-feed duplicate from CSV"
-    }
+    {"indicator": "185.220.101.47", "type": "ip", "severity": "High", "source": "botnet_feed", "description": "Botnet C2 server"},
+    {"indicator": "ransomware-stage2.tk", "type": "domain", "severity": "Critical", "source": "botnet_feed", "description": "Ransomware staging domain"},
+    {"indicator": "aabbccddeeff00112233445566778899", "type": "hash", "severity": "High", "source": "botnet_feed", "description": "Malware hash"},
+    {"indicator": "185.220.101.45", "type": "ip", "severity": "Critical", "source": "botnet_feed", "description": "Cross-feed duplicate from CSV"}
   ]
 }
