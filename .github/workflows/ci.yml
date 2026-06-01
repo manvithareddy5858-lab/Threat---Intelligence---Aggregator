@@ -10,7 +10,6 @@ jobs:
   test:
     name: Run pytest suite (${{ matrix.python-version }})
     runs-on: ubuntu-latest
- 
     strategy:
       fail-fast: false
       matrix:
@@ -32,11 +31,13 @@ jobs:
  
       - name: Run tests with coverage
         run: |
-          pytest tests/ -v --tb=short --cov=modules --cov-report=term-missing
+          pytest tests/ -v --tb=short --cov=modules --cov-report=term-missing --cov-report=xml
+        env:
+          PYTHONPATH: ${{ github.workspace }}
  
-      - name: Upload coverage report
+      - name: Upload coverage
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: coverage-py${{ matrix.python-version }}
-          path: .coverage
+          path: coverage.xml
